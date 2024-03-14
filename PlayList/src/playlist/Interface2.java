@@ -9,5 +9,13 @@ package playlist;
  * @author adria
  */
 public class Interface2 {
+    public boolean isEmpty();
+    public boolean isFull();
+    public void push(Object newItem);
+    public Object pop;
+    public int size();
+    public void emptyStack();
+    public String displayStack();
+    
     
 }
