@@ -12,7 +12,7 @@ import java.util.*;
 
 /**
  */
-public class genreB extends Interface1{
+public class genreB implements InterfaceA{
     private ArrayList<String> genreB;
     
     public genreB(){

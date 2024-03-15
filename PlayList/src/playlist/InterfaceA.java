@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
 package playlist;
 
@@ -8,8 +8,8 @@ package playlist;
  *
  * @author adria
  */
-public class Interface1 {
-    
+public interface InterfaceA {
+     
     public boolean isEmpty();
     
     public int size();
@@ -17,6 +17,6 @@ public class Interface1 {
     public Object fromElement();
     public void engueue(Object newItem);
     public Object degueue();
-    
+    public String displayQueue();
     
 }

@@ -10,7 +10,7 @@ import java.util.*;
  *
  * @author adria
  */
-public class LikedSong extends Interface2{
+public class LikedSong implements InterfaceB{
     private Arraylist<String> likedSong;
     
     public LikedSong(){
@@ -29,9 +29,11 @@ public class LikedSong extends Interface2{
     public boolean isFull(){
         return false;
     }
-    public Object pop(){
+    public String genreA(){
         if(!(likedSong.isEmpty())){
-            return likedSong.remove(index:0, (String) newItem);
+            return likedSong.remove(index:0);
+        }else{
+            return null;
             
             
         }
@@ -41,7 +43,7 @@ public class LikedSong extends Interface2{
         }
         public void emptyStack(){
             while(!likedSong.isEmpty());
-            pop();
+            genreA();
         }
         public String displayStack(){
             int icount;
@@ -63,6 +65,14 @@ public class LikedSong extends Interface2{
     private static class Arraylist<T> {
 
         public Arraylist() {
+        }
+
+        private int size() {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        private boolean isEmpty() {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
         }
     }
         

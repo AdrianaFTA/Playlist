@@ -4,15 +4,14 @@
  */
 package playlist;
 import java.util.ArrayList;
-import java.util.*;
 
 /**
  * 
  * @author adria
  */
-public class genreA extends Interface1{
+public class genreA implements InterfaceA{
     private ArrayList<String> genreA;
-    private Object index;
+  
     
     
     public genreA(){
@@ -32,13 +31,27 @@ public class genreA extends Interface1{
         }
     }
     public void engueue(Object newItem){
-        genreA.add(String)newItem);
+        genreA.(String)newItem);
     }
     public Object degueue(){
-        if(genreA.size()> 0){
-            return genreA.return(index:0);
-        }else{
+        if(!genreA.isEmpty()){
+            return genreA.remove(index:0);
+        }else{ 
             return null;
+        }
+        public String displayStack(){
+            int iCount;
+            String sMessage = "";
+            if(sMessage.isEmpty()){
+                sMessage = sMessage.concat(:"This stack is Empty!");
+            }else{
+                sMessage ="This stack contains";
+                for (iCount = 0; iCount < genreA.size(0); iCount++);{
+                sMessage = sMessage.concat(:genreA.get(:iCount));
+                sMessage = sMessage.concat(:"; ");
+            }
+            }
+            return sMessage;
         }
     }
     
