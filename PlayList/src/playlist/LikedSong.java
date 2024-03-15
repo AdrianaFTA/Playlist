@@ -3,16 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package playlist;
+import java.util.*;
+
 
 /**
  *
  * @author adria
  */
-public class LikedSong implements Interface2{
+public class LikedSong extends Interface2{
     private Arraylist<String> likedSong;
     
     public LikedSong(){
-        likedSong = new ArrayList<String>();
+        likedSong = new Arraylist<String>();
         
     }
     
@@ -57,6 +59,12 @@ public class LikedSong implements Interface2{
             }
             rerturn sMessage;
         }
+
+    private static class Arraylist<T> {
+
+        public Arraylist() {
+        }
+    }
         
     }
     

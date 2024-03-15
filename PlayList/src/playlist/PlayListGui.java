@@ -9,16 +9,16 @@ package playlist;
  * @author adria
  */
 public class PlayListGui extends javax.swing.JFrame {
-    private Interface1 myPop;
-    private Interface1 myRock;
+    private Interface1 mygenreA;
+    private Interface1 mygenreB;
     private Interface2 myLikedSong;
 
     /**
      * Creates new form PlayListGui
      */
     public PlayListGui() {
-        myPOp = new Pop();
-        myRock = new Rock();
+        myPOp = new genreA();
+        myRock = new genreB();
         myLikedSong = new LikedSong();
         initComponents();
     }
