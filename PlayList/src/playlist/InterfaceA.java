@@ -17,6 +17,7 @@ public interface InterfaceA {
     public Object fromElement();
     public void engueue(Object newItem);
     public Object degueue();
+    
     public String displayQueue();
     
 }

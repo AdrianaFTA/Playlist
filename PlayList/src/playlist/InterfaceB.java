@@ -13,7 +13,7 @@ public interface InterfaceB {
      public boolean isEmpty();
     public boolean isFull();
     public void push(Object newItem);
-    public Object LikedSong;
+    public Object LikedSong();
     public int size();
     public void emptyStack();
     public String displayStack();

@@ -31,19 +31,17 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jScrollPane2" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="Addbtn" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
-                  <Component id="Shufflebtn" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
+                  <Component id="Nobtn" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Playlistbtn" min="-2" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                  <Component id="AddPopbtn" min="-2" pref="113" max="-2" attributes="0"/>
-                  <Component id="Clearpopbtn" alignment="0" min="-2" pref="113" max="-2" attributes="0"/>
+                  <Component id="Movebtn" min="-2" pref="113" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane3" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
-                  <Component id="Addrockbtn" min="-2" max="-2" attributes="0"/>
+                  <Component id="jScrollPane3" min="-2" pref="161" max="-2" attributes="0"/>
+                  <Component id="Searchbtn" min="-2" pref="108" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="192" max="-2" attributes="0"/>
           </Group>
@@ -64,11 +62,13 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="Deletebtn" min="-2" pref="102" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="248" max="-2" attributes="0"/>
-                      <Component id="Clearrockbtn" min="-2" pref="113" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                      <Component id="Displaybtn" min="-2" pref="113" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                      <Component id="Repeatbtn" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="287" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -94,27 +94,17 @@
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="Addbtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="AddPopbtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Addrockbtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Movebtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Searchbtn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                      <Component id="Deletebtn" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="Clearpopbtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Clearrockbtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Deletebtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Displaybtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Repeatbtn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Shufflebtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Playlistbtn" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <Component id="Nobtn" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="75" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -164,7 +154,7 @@
     </Container>
     <Component class="javax.swing.JButton" name="Addbtn">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Add Song"/>
+        <Property name="text" type="java.lang.String" value="Add "/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AddbtnActionPerformed"/>
@@ -172,20 +162,15 @@
     </Component>
     <Component class="javax.swing.JButton" name="Deletebtn">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Delete Song"/>
+        <Property name="text" type="java.lang.String" value="Delete "/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DeletebtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Shufflebtn">
+    <Component class="javax.swing.JButton" name="Nobtn">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Shuffle List"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="Playlistbtn">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Delete Playlist"/>
+        <Property name="text" type="java.lang.String" value="No. Song"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
@@ -203,27 +188,30 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="AddPopbtn">
+    <Component class="javax.swing.JButton" name="Movebtn">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Add to Pop List"/>
+        <Property name="text" type="java.lang.String" value="Move"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AddPopbtnActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MovebtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Clearpopbtn">
+    <Component class="javax.swing.JButton" name="Displaybtn">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Clear Pop List"/>
+        <Property name="text" type="java.lang.String" value="Display Songs"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DisplaybtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="Searchbtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Search"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Addrockbtn">
+    <Component class="javax.swing.JButton" name="Repeatbtn">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Add to Rock List"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="Clearrockbtn">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Clear Rock List"/>
+        <Property name="text" type="java.lang.String" value="Repeat"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane3">
@@ -233,7 +221,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea1">
+        <Component class="javax.swing.JTextArea" name="Txtarea3">
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>

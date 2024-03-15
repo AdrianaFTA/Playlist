@@ -27,22 +27,40 @@ public class genreB implements InterfaceA{
     }
     public Object fromElement(){
         if(genreB.size()> 0 ){
-            return genreB.get(index:0);
-    }else{
-        return null;
+            return genreB.remove(0);
+        }else{
+            return null;
+        }
+
     }
         public void engueue(Object newItem){
-            genreB.add(displayStack);
+            genreB.add((String)newItem);
             
         }
         public Object degueue(){
             if(genreB.size()>0){
-                return genreB.remove(index:0);
+                return genreB.remove(0);
             }else{
                 return null;
             }
-        }
+         public String displayQueue(){
+             int iCount;
+             String sMessage = "";
+             if(genreB.isEmpty()){
+                 sMessage = sMessage.concat("This Rock playlist is currently empty");
+             }else{
+                 sMessage = "The Rock playlist contains: ";
+                for(iCount = 0; iCount < genreB.size(); iCount++){
+                    sMessage = sMessage.concat(genreB.get(iCount));
+                    sMessage = sMessage.concat(", ");
+                }
+            }
+            return sMessage;
+             }
+         }
+               
+        
             
-        }
+        
     
 

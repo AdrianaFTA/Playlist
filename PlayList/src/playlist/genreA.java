@@ -31,28 +31,28 @@ public class genreA implements InterfaceA{
         }
     }
     public void engueue(Object newItem){
-        genreA.(String)newItem);
+        genreA.add((String) newItem);
     }
     public Object degueue(){
-        if(!genreA.isEmpty()){
-            return genreA.remove(index:0);
+        if(genreA.size()>0){
+            return genreA.remove(0);
         }else{ 
             return null;
         }
-        public String displayStack(){
+        public String displayQueue(){
             int iCount;
             String sMessage = "";
-            if(sMessage.isEmpty()){
-                sMessage = sMessage.concat(:"This stack is Empty!");
+            if(genreA.isEmpty()){
+                sMessage = sMessage.concat("The Pop playlist is currently empty");
             }else{
-                sMessage ="This stack contains";
-                for (iCount = 0; iCount < genreA.size(0); iCount++);{
-                sMessage = sMessage.concat(:genreA.get(:iCount));
-                sMessage = sMessage.concat(:"; ");
-            }
+                sMessage = "The pop playlist contains: ";
+                for(iCount = 0; iCount < genreA.size(); iCount++){
+                    sMessage = sMessage.concat(genreA.get(iCount));
+                    sMessage = sMessage.concat(", ");
+                }
             }
             return sMessage;
         }
     }
     
-}
+
