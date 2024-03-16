@@ -19,5 +19,9 @@ public interface InterfaceA {
     public Object degueue();
     
     public String displayQueue();
+
+    public boolean contains(String songNameDelete);
+
+    public void remove(String songNameDelete);
     
 }

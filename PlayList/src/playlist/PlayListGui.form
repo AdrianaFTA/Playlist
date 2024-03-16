@@ -31,7 +31,6 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jScrollPane2" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="Addbtn" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
-                  <Component id="Nobtn" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -103,9 +102,7 @@
                   <Component id="Displaybtn" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Repeatbtn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="Nobtn" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="75" max="32767" attributes="0"/>
+              <EmptySpace pref="118" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -168,11 +165,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DeletebtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Nobtn">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="No. Song"/>
-      </Properties>
-    </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -208,6 +200,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Search"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SearchbtnActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Repeatbtn">
       <Properties>

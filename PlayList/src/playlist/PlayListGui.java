@@ -40,7 +40,6 @@ public class PlayListGui extends javax.swing.JFrame {
         Txtarea1 = new javax.swing.JTextArea();
         Addbtn = new javax.swing.JButton();
         Deletebtn = new javax.swing.JButton();
-        Nobtn = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         Txtarea2 = new javax.swing.JTextArea();
         Movebtn = new javax.swing.JButton();
@@ -89,8 +88,6 @@ public class PlayListGui extends javax.swing.JFrame {
             }
         });
 
-        Nobtn.setText("No. Song");
-
         Txtarea2.setColumns(20);
         Txtarea2.setRows(5);
         jScrollPane2.setViewportView(Txtarea2);
@@ -110,6 +107,11 @@ public class PlayListGui extends javax.swing.JFrame {
         });
 
         Searchbtn.setText("Search");
+        Searchbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SearchbtnActionPerformed(evt);
+            }
+        });
 
         Repeatbtn.setText("Repeat");
 
@@ -125,8 +127,7 @@ public class PlayListGui extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Addbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Nobtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Addbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -182,9 +183,7 @@ public class PlayListGui extends javax.swing.JFrame {
                     .addComponent(Deletebtn)
                     .addComponent(Displaybtn)
                     .addComponent(Repeatbtn))
-                .addGap(18, 18, 18)
-                .addComponent(Nobtn)
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         pack();
@@ -225,11 +224,44 @@ public class PlayListGui extends javax.swing.JFrame {
 
     private void DeletebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeletebtnActionPerformed
         // TODO add your handling code here:
+        String songNameDelete = Namefld.getText();
+        
+        if(mygenreA.contains(songNameDelete)){
+            mygenreA.remove(songNameDelete);
+            Txtarea1.append(songNameDelete + "was removed from pop playlist\n");
+        }
+        if(mygenreB.contains(songNameDelete)){
+            mygenreB.remove(songNameDelete);
+            Txtarea2.append(songNameDelete +"was removed from rock playlist\n");
+            
+        }
+        if(mylikedSong.contains(songNameDelete)){
+            mylikedSong.remove(songNameDelete);
+            Txtarea3.append(songNameDelete +" was removed from liked playlist\n");
+        }
+        Namefld.setText("");
+        Genrefld.setText("");
         
     }//GEN-LAST:event_DeletebtnActionPerformed
 
     private void MovebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MovebtnActionPerformed
         // TODO add your handling code here:
+        String genre = Genrefld.getText().toLowerCase();
+        
+        String songName = Namefld.getText();
+        
+        if(genre.equals("pop")){
+            mygenreA.engueue(songName);
+            Txtarea1.append(songName + " was added to the pop playlist\n");
+        }else if(genre.equals("rock")){
+            mygenreB.engueue(songName);
+            Txtarea2.append(songName + " was added to the rock playlist\n");
+        }else{
+            Txtarea3.append("Invalis input please add either pop or rock music\n");
+            
+        }
+        Namefld.setText("");
+        Genrefld.setText("");
     }//GEN-LAST:event_MovebtnActionPerformed
 
     private void DisplaybtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DisplaybtnActionPerformed
@@ -240,6 +272,11 @@ public class PlayListGui extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_DisplaybtnActionPerformed
+
+    private void SearchbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchbtnActionPerformed
+        // TODO add your handling code here:
+   
+    }//GEN-LAST:event_SearchbtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -285,7 +322,6 @@ public class PlayListGui extends javax.swing.JFrame {
     private javax.swing.JButton Movebtn;
     private javax.swing.JTextField Namefld;
     private javax.swing.JLabel Namelbl;
-    private javax.swing.JButton Nobtn;
     private javax.swing.JButton Repeatbtn;
     private javax.swing.JButton Searchbtn;
     private javax.swing.JTextArea Txtarea1;

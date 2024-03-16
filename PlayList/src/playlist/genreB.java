@@ -43,6 +43,7 @@ public class genreB implements InterfaceA{
             }else{
                 return null;
             }
+        }
          public String displayQueue(){
              int iCount;
              String sMessage = "";
@@ -57,6 +58,16 @@ public class genreB implements InterfaceA{
             }
             return sMessage;
              }
+
+    @Override
+    public boolean contains(String songNameDelete) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void remove(String songNameDelete) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
          }
                
         

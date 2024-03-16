@@ -23,7 +23,7 @@ public class LikedSong implements InterfaceB {
         return likedSong.size();
     }
 
-    public boolean IsEmpty() {
+    public boolean isEmpty() {
         return likedSong.isEmpty();
 
     }
@@ -73,5 +73,15 @@ public class LikedSong implements InterfaceB {
             }
             }
             return sMessage;
+    }
+
+    @Override
+    public boolean contains(String songNameDelete) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void remove(String songNameDelete) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

@@ -18,6 +18,10 @@ public interface InterfaceB {
     public int size();
     public void emptyStack();
     public String displayStack();
+
+    public boolean contains(String songNameDelete);
+
+    public void remove(String songNameDelete);
     
     
 }
