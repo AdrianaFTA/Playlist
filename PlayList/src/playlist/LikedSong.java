@@ -5,6 +5,7 @@
 package playlist;
 
 import java.util.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -52,12 +53,13 @@ public class LikedSong implements InterfaceB {
         likedSong.add(0, (String)newItem);
             
         }
+     //removes all elements from stack
         public void emptyStack() {
         while (!likedSong.isEmpty());{
         pop();
         }
     }
-
+//returns string object// for loop used
     public String displayStack() {
         int iCount;
         String sMessage = "";
@@ -73,6 +75,46 @@ public class LikedSong implements InterfaceB {
             }
             }
             return sMessage;
+    }
+    public String search(){
+        String response = "";
+        if(likedSong.isEmpty()){
+            response = response.concat("There is nothing to search for ");
+        }else{
+            String searchTerm  = JOptionPane.showInputDialog(null, "Enter a song to search");
+                
+            ArrayList<String> searchMatch = new ArrayList();
+            for(String songName : likedSong){
+                if(songName.equalsIgnoreCase(searchTerm)){
+                    searchMatch.add(songName);
+                    response = response.concat("Title of song is");
+                    for(String song: searchMatch){
+                        response = response.concat(song).concat("");
+                    }
+                }else{
+                    response = response.concat("Song entered could bot be found");
+                    
+                }
+            }
+        }
+        return response;
+    }
+     
+    public String repeat(){
+        String response = "";
+        ArrayList<String> repeat = new ArrayList();
+        int rep;
+        rep = 1;
+        for (int i = 0; i<rep; i++){
+            repeat.addAll(likedSong);//add all elements from first/origional playlist
+            response = response.concat("Playlist repeated with the songs");
+            for(String song: repeat){
+                response = response.concat(song).concat(" ");
+                
+            }
+            
+        }
+         return response;       
     }
 
     @Override

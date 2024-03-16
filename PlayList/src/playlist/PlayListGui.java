@@ -114,6 +114,11 @@ public class PlayListGui extends javax.swing.JFrame {
         });
 
         Repeatbtn.setText("Repeat");
+        Repeatbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RepeatbtnActionPerformed(evt);
+            }
+        });
 
         Txtarea3.setColumns(20);
         Txtarea3.setRows(5);
@@ -277,6 +282,10 @@ public class PlayListGui extends javax.swing.JFrame {
         // TODO add your handling code here:
    
     }//GEN-LAST:event_SearchbtnActionPerformed
+
+    private void RepeatbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RepeatbtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RepeatbtnActionPerformed
 
     /**
      * @param args the command line arguments
