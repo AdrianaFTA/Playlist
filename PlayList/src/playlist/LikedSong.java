@@ -32,22 +32,30 @@ public class LikedSong implements InterfaceB {
         return false;
     }
 
-    public String pop() {
-        while (!likedSong.isEmpty()) {
+    public Object pop() {
             if (!(likedSong.isEmpty())) {
                 return likedSong.remove(0);
             } else {
                 return null;
             }
         }
+    public Object rock(){
+        if(!(likedSong.isEmpty())){
+            return likedSong.remove(0);
+        }else{
+            return null;
+            
+        }
+    }
  
      public void push(Object newItem) {
         likedSong.add(0, (String)newItem);
             
         }
         public void emptyStack() {
-        while (!likedSong.isEmpty());
+        while (!likedSong.isEmpty());{
         pop();
+        }
     }
 
     public String displayStack() {

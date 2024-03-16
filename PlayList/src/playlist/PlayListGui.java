@@ -19,7 +19,7 @@ public class PlayListGui extends javax.swing.JFrame {
     public PlayListGui() {
         mygenreA = new genreA();
         mygenreB = new genreB();
-        myLikedSong = new LikedSong();
+        mylikedSong = new LikedSong();
         initComponents();
     }
 
